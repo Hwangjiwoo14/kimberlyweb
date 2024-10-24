@@ -1,0 +1,150 @@
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    background-image: url('image.png'); /* 배경 이미지 */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7); /* 어두운 오버레이 */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* 영화 포스터 스타일 폰트 */
+    margin-bottom: 20px;
+}
+
+/* WELCOME TO THE SHOW!의 페이드 인 효과 */
+.fade-in {
+    opacity: 0;
+    animation: fade-in 3s forwards;
+    animation-delay: 1s; /* 딜레이 후 페이드 인 */
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slide-up 1.5s ease-out forwards;
+    animation-delay: 3s; /* WELCOME TO THE SHOW!이 뜬 후 바로 실행 */
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 작게 나오는 텍스트 애니메이션 */
+.fade-in-text {
+    font-size: 1.5rem;
+    opacity: 0;
+    margin-top: 10px;
+    animation: fade-in-text 2s forwards;
+    animation-delay: 3.5s; /* 바로 이어서 나옴 */
+}
+
+@keyframes fade-in-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 영화 티켓 스타일 버튼 */
+.ticket-btn {
+    background-color: #4B3C30; /* 어두운 브라운 */
+    color: #fff; /* 흰색 텍스트 */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    border: 3px solid #333;
+    position: relative;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* 영화 티켓 모양을 위한 구멍 효과 */
+.ticket-btn::before, .ticket-btn::after {
+    content: "";
+    position: absolute;
+    background-color: #333;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ticket-btn::before {
+    left: -10px;
+}
+
+.ticket-btn::after {
+    right: -10px;
+}
+
+/* 마우스 오버 시 효과 */
+.ticket-btn:hover {
+    background-color: #505050; /* 중간 회색 */
+    color: #fff; /* 흰색 텍스트 유지 */
+}
+
+/* 클릭할 때 약간 움푹 들어가는 효과 */
+.ticket-btn:active {
+    transform: scale(0.95);
+}
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
