@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>내가 선호하는</title>
+  <link rel="stylesheet" href="newpage.css" />
+  <script defer src="preferences.js"></script>
+</head>
+<body>
+  <div class="overlay-page">
+    <div class="pref-wrap">
+      <h1 class="pref-title">My Preferences</h1>
+      <p class="pref-sub">Choose a chapter of my mood.</p>
+
+      <div class="pref-buttons">
+        <button class="pref-btn active" data-target="fashion">패션</button>
+        <button class="pref-btn" data-target="space">장소</button>
+        <button class="pref-btn" data-target="music">음악</button>
+      </div>
+
+      <!-- 패션 -->
+      <section id="fashion" class="pref-panel show">
+        <h2>👗 Fashion Mood — “Lovely Hip & Feminine Edge”</h2>
+        <p>부드러움 속에서 당당함이 드러나는, 러블리와 스트릿 감성이 교차하는 페미닌 힙 무드.</p>
+        <ul>
+          <li>페미닌 + 스트릿 믹스</li>
+          <li>비비드 컬러 포인트</li>
+          <li>스타 네일·글리터 등 디테일</li>
+          <li>힙하지만 과하지 않은 균형감</li>
+        </ul>
+      </section>
+
+      <!-- 장소 -->
+      <section id="space" class="pref-panel">
+        <h2>🌿 Space Mood — “Cozy Chaos & Curated Warmth”</h2>
+        <p>따뜻한 조명, 식물, 빈티지 오브제, 콜라주로 구성된 개인적이고 창의적인 아지트.</p>
+        <ul>
+          <li>Cozy / Artistic chaos</li>
+          <li>Vintage & warm light</li>
+          <li>Personal archive (콜라주·사진·책)</li>
+          <li>Nature touch (식물)</li>
+        </ul>
+      </section>
+
+      <!-- 음악 -->
+      <section id="music" class="pref-panel">
+        <h2>🎧 Music Mood — “Indie Sensibility, Hip-Hop Pulse”</h2>
+        <p>감정을 섬세하게 끌어올리는 인디와 리듬을 각인시키는 힙합을 오가는 사운드 팔레트.</p>
+        <ul>
+          <li>잔나비 · 백예린 · 알레프 (감성/몽환)</li>
+          <li>DPR · 홍다빈 (에너지/딥한 컬러)</li>
+          <li>재즈 · 어쿠스틱 (차분함/여유)</li>
+        </ul>
+      </section>
+
+      <div class="ticket-menu" style="margin-top: 24px;">
+        <a href="newpage.html" class="ticket">이전으로</a>
+        <a href="index.html" class="ticket">메인</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
